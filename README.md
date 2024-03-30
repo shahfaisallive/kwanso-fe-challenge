@@ -1,46 +1,78 @@
-# Getting Started with Create React App
+# User Listing App
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+This project is a React frontend application that fetches random user data from the [Random User API](https://randomuser.me/api/) and displays it in a user-friendly interface. It allows users to view a list of users, apply filters, search for users, and view individual user profiles.
 
-## Available Scripts
+## Table of Contents
+- [Running the Codebase Locally](#running-the-codebase-locally)
+- [Developer Notes](#developer-notes)
+- [Exercise Questions](#exercise-questions)
 
-In the project directory, you can run:
+## Running the Codebase Locally
 
-### `npm start`
+To run this project locally, follow these steps:
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in the browser.
+1. Clone the repository to your local machine:
+```bash
+git clone https://github.com/your-username/user-listing-app.git
 
-The page will reload if you make edits.\
-You will also see any lint errors in the console.
 
-### `npm test`
+2. Navigate to the project directory:
+```bash
+cd kwanso-fe-challenge
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
 
-### `npm run build`
+3. Install dependencies:
+```bash
+npm install
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
+4. Start the development server:
+```bash
+npm start
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
 
-### `npm run eject`
+5. Open your browser and visit `http://localhost:3000` to view the application.
 
-**Note: this is a one-way operation. Once you `eject`, you can’t go back!**
+## Developer Notes
 
-If you aren’t satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
+### Project Structure
 
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you’re on your own.
+The project follows a standard React project structure with components organized into separate files and directories under the `src` directory. Here's a brief overview of the project structure:
 
-You don’t have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn’t feel obligated to use this feature. However we understand that this tool wouldn’t be useful if you couldn’t customize it when you are ready for it.
+- `src/components`: Contains React components such as `UserList`, `UserProfile`, etc.
+- `src/types`: Contains TypeScript type definitions for API responses and other data structures.
+- `src/App.tsx`: Main component that serves as the entry point to the application.
+- `src/index.tsx`: Entry point of the application where React is rendered into the DOM.
 
-## Learn More
+### Component Structure and Thought Process
 
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
+- **UserList Component**: This component fetches user data from the API and displays it in a list format. It includes pagination, filtering, and searching functionalities. The list is initially displayed as a table to improve readability and user experience.
 
-To learn React, check out the [React documentation](https://reactjs.org/).
+- **UserProfile Component**: This component displays detailed information about an individual user. It includes the user's profile picture, name, email, location, etc. Users can navigate to this component by clicking on a user's name in the user list.
+
+### Styling
+
+- The project uses Tailwind CSS for styling to create a clean and modern UI.
+- Components are styled using Tailwind CSS utility classes to maintain consistency and improve maintainability.
+
+## Exercise Questions
+
+### How did you structure your components?
+
+- Components are structured into separate files and directories based on their functionality.
+- Each component is responsible for a specific part of the UI and follows the principles of separation of concerns.
+
+### How did you approach implementing the features and functionalities?
+
+- I followed a step-by-step approach to implement each feature, starting with basic functionality and gradually adding enhancements.
+- I utilized React hooks for state management and Axios for making API requests.
+- I paid attention to code readability, maintainability, and performance while implementing the features.
+
+### Did you encounter any challenges during the implementation? If so, how did you overcome them?
+
+- One challenge was handling API requests and managing state updates effectively, especially when dealing with pagination and filtering.
+- To overcome this, I carefully designed the component architecture and utilized React's useEffect hook to manage side effects.
+- I also used TypeScript to catch potential errors early in the development process and ensure type safety.
+
+
+
